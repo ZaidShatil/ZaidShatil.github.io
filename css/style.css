@@ -1,13 +1,13 @@
 *{
 	padding: 0;
 	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	box-sizing: border-box;
 }
-.hero{
+.here{
 	height: 100vh;
 	width: 100%;
-	background-image: url(../img/background.jpg);
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 }
@@ -44,7 +44,7 @@ nav ul li a:hover{
 	transition: .4s;
 }
 .btn{
-	background-color:#f9004d;
+	background-color:black;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -98,7 +98,7 @@ h4{
 	padding: 10px 30px;
 	border-radius: 30px;
 	background-color:#f9004d;
-	color: white;
+	color: black;
 	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 	top: 6px;
 	right: 6px; 
@@ -111,7 +111,7 @@ h4{
 }
 .about img{
 	height: auto;
-	width: 430px;
+	width: 350px;
 }
 .about-text{
 	width: 550px;
@@ -138,14 +138,14 @@ h4{
 	text-transform: capitalize;
 }
 .about-text p{
-	color: #fcfc;
+	color: white;
 	letter-spacing: 1px;
 	line-height: 28px;
 	font-size: 18px;
 	margin-bottom: 45px;
 }
 button{
-	background-color:#f9004d;
+	background-color:black;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -209,7 +209,7 @@ h5{
 	margin-bottom: 25px;
 }
 .card .button{
-	background-color:#f9004d;
+	background-color:black;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -220,7 +220,7 @@ h5{
 }
 .card .button:hover{
 	background-color: transparent;
-	border: 2px solid #f9004d;
+	border: 2px solid black;
 	cursor: pointer;
 }
 .contact-me{
@@ -231,6 +231,18 @@ h5{
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.my-details{
+	background-color: black;
+	color: white;
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
 }
 .contact-me p{
 	color: white;
@@ -285,7 +297,7 @@ footer p:nth-child(2){
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background:  #f9004d;
+	background:  black;
 	border-radius: 50%;
 	margin: 22px 10px;
 	color: white;
@@ -298,7 +310,7 @@ footer p:nth-child(2){
 }
 .end{
 	position: absolute;
-	color:#f9004d;
+	color:black;
 	bottom: 35px;
 	font-size: 14px; 
 }
