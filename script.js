@@ -26,17 +26,17 @@ const getNewQuote = async () => {
 getNewQuote()
 
 function red() {
-    document.body.style.backgroundColor = "red";
+    document.getElementById('box').style.backgroundColor = "red";
 }
 
 function green() {
-    document.body.style.backgroundColor = "green";
+    document.getElementById('box').style.backgroundColor = "green";
 }
 
 function blue() {
-    document.body.style.backgroundColor = "blue";
+    document.getElementById('box').style.backgroundColor = "blue";
 }
 
 function yellow() {
-    document.body.style.backgroundColor = "yellow";
+    document.getElementById('box').style.backgroundColor = "yellow";
 }
