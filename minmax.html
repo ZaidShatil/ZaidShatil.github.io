@@ -15,76 +15,70 @@
 <body>
     <div class='Header'>
         <nav>
-            <a class="btn" style="color:white ;" href="index.html">Quote Generator</a>
-            <a class="btn" style="color:white ;" href="converter.html">Converter</a>
-            <a class="btn" style="color: white;" class="header" href="magicbox.html">Magic Box</a>
+            <a href="index.html">Quote Generator</a>
+            <a href="converter.html">Converter</a>
+            <a href="magicbox.html">Magic Box</a>
         </nav>
     </div>
 
-    <table style="color:white ;font-size: 40px;" width="120%";length="100%">
-        <tr>
-            <td width="13%">Input Series of Number:</td>
-            <td width="29%"><input name="box1" type="text" id="box1" value="12,12,22,9,1,20" /></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Max :</td>
-            <td>
-                <div id="max"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Min :</td>
-            <td>
-                <div id="min"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Sum :</td>
-            <td>
-                <div id="sum"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Average :</td>
-            <td>
-                <div id="avg"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Reverse Order :</td>
-            <td>
-                <div id="reverse"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-        </tr>
-    </table>
-    <button class="btn" onclick="calculate()">calculate</button>
+    <form class="maths" onkeyup="inputchange()">
+        <div class="input">
+          <label>Input Series of Number</label>
+          <input type="Text"/>
+        </div>
+        <div>
+          <label>Max: </label>
+          <span class="max"> </span>
+        </div>
+        <div>
+          <label>Min: </label>
+          <span class="min"> </span>
+        </div>
+        <div>
+          <label>Sum: </label>
+          <span class="sum"></span>
+        </div>
+        <div>
+          <label>Average: </label>
+          <span class="average"> </span>
+        </div>
+        <div>
+          <label>Reverse Order: </label>
+          <span class="reverse"> </span>
+        </div>
+      </form>
+    </div>
 
     <script>
-        function calculate() {
-            var values = document.getElementById('box1').value.split(/,/g);
-            var sum = values.reduce(function (a, b) { return parseInt(a) + parseInt(b); });
-            document.querySelector('#max').innerHTML = values.max();
-            document.querySelector('#min').innerHTML = values.min();
-            document.querySelector('#sum').innerHTML = sum;
-            document.querySelector('#avg').innerHTML = sum / values.length;
-            document.querySelector('#reverse').innerHTML = values.reverse().join(',');
-        }
+    const input = document.querySelector("input");
+    const max2 = document.querySelector(".max");
+    const min2 = document.querySelector(".min");
+    const sum2 = document.querySelector(".sum");
+    const average2 = document.querySelector(".average");
+    const reverse2 = document.querySelector(".reverse");
 
-        Array.prototype.max = function () {
-            return Math.max.apply(null, this);
-        };
-
-        Array.prototype.min = function () {
-            return Math.min.apply(null, this);
-        };
+const inputchange = () =>{
+    let hello = input.value.split(",");
+    hello = hello.filter(Number);
+    console.log(hello);
+    const max = hello.reduce((a,b)=>{
+        return Math.max(parseInt(a),parseInt(b));
+    })
+    max2.innerHTML = max;
+    const min = hello.reduce((a,b)=>{
+        return Math.min(parseInt(a),parseInt(b));
+    })
+    min2.innerHTML = min;
+    const sum = hello.reduce((accumulator, curr)=>{
+        return parseInt(accumulator)+parseInt(curr);
+    })
+    sum2.innerHTML = sum;
+    const average = sum/hello.length;
+    average2.innerHTML = average;
+    hello.reverse();
+    hello.toString();
+    reverse2.innerHTML = hello;
+}
 
     </script>
 </body>
